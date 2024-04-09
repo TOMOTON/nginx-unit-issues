@@ -1,0 +1,17 @@
+{
+    "listeners": {
+        "*:8080": {
+            "pass": "applications/nginx-unit-issue"
+        }
+    },
+    "applications": {
+        "nginx-unit-issue": {
+            "type": "python",
+            "working_directory": "/home/vcap",
+            "path": "/home/vcap",
+            "user": "vcap",
+            "group": "vcap",
+            "module": "nginx_unit_issue.wsgi"
+        }
+    }
+}

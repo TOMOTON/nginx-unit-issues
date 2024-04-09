@@ -1,0 +1,22 @@
+openapi: "3.0.1"
+
+info:
+  title: Issues API
+  version: "1.0"
+servers:
+  - url: http://localhost:9090/v1.0
+
+paths:
+  /issues:
+    get:
+      summary: Gets issues
+      description: Gets the issues.
+      operationId: nginx_unit_issue.issues.get_issues
+      responses:
+        200:
+          description: Issues response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Uh-oh!"
